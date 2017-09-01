@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="PM_type">
+      <UniqueIdentifier>{37738fa7-3860-4a3d-a08a-f9f05a257370}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PM_type\auxiliary">
+      <UniqueIdentifier>{0b577ce1-b107-4a8b-b03a-bf8ecfc4eca7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PM_type\funs">
+      <UniqueIdentifier>{af20064c-18fb-4d06-b4a5-ddc1999d9c41}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="FastDPM.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yuStdDirFiles_标准库目录操作.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="auxiliary\cvPrint.cpp">
+      <Filter>PM_type\auxiliary</Filter>
+    </ClCompile>
+    <ClCompile Include="auxiliary\getCurrentTime.cpp">
+      <Filter>PM_type\auxiliary</Filter>
+    </ClCompile>
+    <ClCompile Include="auxiliary\yuSaveMat.cpp">
+      <Filter>PM_type\auxiliary</Filter>
+    </ClCompile>
+    <ClCompile Include="funs\analyze_model.cpp">
+      <Filter>PM_type\funs</Filter>
+    </ClCompile>
+    <ClCompile Include="funs\apply_rules.cpp">
+      <Filter>PM_type\funs</Filter>
+    </ClCompile>
+    <ClCompile Include="funs\apply_rules2.cpp">
+      <Filter>PM_type\funs</Filter>
+    </ClCompile>
+    <ClCompile Include="funs\apply_rules3.cpp">
+      <Filter>PM_type\funs</Filter>
+    </ClCompile>
+    <ClCompile Include="funs\bboxpred_get.cpp">
+      <Filter>PM_type\funs</Filter>
+    </ClCompile>
+    <ClCompile Include="funs\bboxpred_input.cpp">
+      <Filter>PM_type\funs</Filter>
+    </ClCompile>
+    <ClCompile Include="funs\bounded_dt.cpp">
+      <Filter>PM_type\funs</Filter>
+    </ClCompile>
+    <ClCompile Include="funs\bounded_dt2.cpp">
+      <Filter>PM_type\funs</Filter>
+    </ClCompile>
+    <ClCompile Include="funs\clipboxes.cpp">
+      <Filter>PM_type\funs</Filter>
+    </ClCompile>
+    <ClCompile Include="funs\cvPermutate.cpp">
+      <Filter>PM_type\funs</Filter>
+    </ClCompile>
+    <ClCompile Include="funs\detections_trees2.cpp">
+      <Filter>PM_type\funs</Filter>
+    </ClCompile>
+    <ClCompile Include="funs\draw_img.cpp">
+      <Filter>PM_type\funs</Filter>
+    </ClCompile>
+    <ClCompile Include="funs\fconv.cpp">
+      <Filter>PM_type\funs</Filter>
+    </ClCompile>
+    <ClCompile Include="funs\featpyramid.cpp">
+      <Filter>PM_type\funs</Filter>
+    </ClCompile>
+    <ClCompile Include="funs\featpyramid2.cpp">
+      <Filter>PM_type\funs</Filter>
+    </ClCompile>
+    <ClCompile Include="funs\features.cpp">
+      <Filter>PM_type\funs</Filter>
+    </ClCompile>
+    <ClCompile Include="funs\features14_2.cpp">
+      <Filter>PM_type\funs</Filter>
+    </ClCompile>
+    <ClCompile Include="funs\flipfeat.cpp">
+      <Filter>PM_type\funs</Filter>
+    </ClCompile>
+    <ClCompile Include="funs\get_score_size.cpp">
+      <Filter>PM_type\funs</Filter>
+    </ClCompile>
+    <ClCompile Include="funs\load_model.cpp">
+      <Filter>PM_type\funs</Filter>
+    </ClCompile>
+    <ClCompile Include="funs\loc_feat.cpp">
+      <Filter>PM_type\funs</Filter>
+    </ClCompile>
+    <ClCompile Include="funs\model_get_block.cpp">
+      <Filter>PM_type\funs</Filter>
+    </ClCompile>
+    <ClCompile Include="funs\nms.cpp">
+      <Filter>PM_type\funs</Filter>
+    </ClCompile>
+    <ClCompile Include="funs\parse_detections.cpp">
+      <Filter>PM_type\funs</Filter>
+    </ClCompile>
+    <ClCompile Include="funs\pDollar_nms.cpp">
+      <Filter>PM_type\funs</Filter>
+    </ClCompile>
+    <ClCompile Include="funs\reduceboxes.cpp">
+      <Filter>PM_type\funs</Filter>
+    </ClCompile>
+    <ClCompile Include="funs\sum_score.cpp">
+      <Filter>PM_type\funs</Filter>
+    </ClCompile>
+    <ClCompile Include="funs\yuInd2Sub.cpp">
+      <Filter>PM_type\funs</Filter>
+    </ClCompile>
+    <ClCompile Include="loadPyramid.cpp">
+      <Filter>资源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FastDPM.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PM_type.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
