@@ -141,6 +141,9 @@ void	PM_type::apply_rules3( MODEL &model, FEATURE_PYRAMID &pyra )
 
 	// symbol_score: apply the very structural rule of this mixture star model
 	int rootSym1 = model.RuleData[0].sym_nonTerminal[0];
+#ifdef OMP_OPEN
+#pragma ompparallel for 
+#endif // OMP_OPEN
 	for( unsigned component=1; component<model.RuleData.size(); component++ ){		
 		int rootSym2 = model.RuleData[component].sym_nonTerminal[0];
 		for( int lv=model.interval; lv<pyra.num_levels; lv++ ){

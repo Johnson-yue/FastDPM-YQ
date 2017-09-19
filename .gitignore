@@ -187,6 +187,7 @@ Debug/*
 Release/*
 FastDPM-2014-May/Debug/*
 FastDPM-2014-May/Release/*
+.db
 
 
 #############

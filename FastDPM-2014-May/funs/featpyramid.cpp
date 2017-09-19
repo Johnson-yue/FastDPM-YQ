@@ -65,7 +65,7 @@ void	PM_type::featpyramid( const Mat &im, MODEL &model, FEATURE_PYRAMID &pyra )
 	int		imsize[2] = { im.rows, im.cols };
 	int		min_imsize = MIN( imsize[0],imsize[1] );
 	int		max_scale = 1 + int(logf(min_imsize/(5.f*sbin))/logf(sc));
-	int		SZ = max_scale + interval;
+	int		SZ = max_scale + interval;   //SZ = 39
 
 	pyra.imsize[0] = imsize[0];
 	pyra.imsize[1] = imsize[1];
@@ -78,13 +78,23 @@ void	PM_type::featpyramid( const Mat &im, MODEL &model, FEATURE_PYRAMID &pyra )
 	MatArr.resize( SZ );
 	// the second octave
 	MatArr[interval] = im; pyra.scales[interval] = 1.f;
-	sc = 1.f/sc; float scf = sc;for( int i=1; i<interval; i++ )
+	sc = 1.f/sc; float scf = sc;
+#ifdef OMP_OPEN
+#pragma ompparallel for 
+#endif // OMP_OPEN
+	for( int i=1; i<interval; i++ )
 	{ resize( MatArr[interval], MatArr[interval+i], Size(), scf, scf, INTER_AREA ); pyra.scales[interval+i] = scf; scf *= sc; }
 	// the first octave
+#ifdef OMP_OPEN
+#pragma ompparallel for 
+#endif // OMP_OPEN
 	for( int i=0; i<interval; i++ ) { MatArr[i] = MatArr[i+interval]; pyra.scales[i] = pyra.scales[interval+i] * 2.f; BinSz[i] = sbin/2; }
 	// the rest octaves	
 	int octaves = SZ / interval + 1;
 	for( int oc=2; oc<octaves; oc++ ){
+#ifdef OMP_OPEN
+#pragma ompparallel for 
+#endif // OMP_OPEN
 		for( int i=0; i<interval; i++ ){
 			int lv = oc*interval+i; if( lv>=SZ ) break;
 			pyrDown( MatArr[lv-interval], MatArr[lv] ); pyra.scales[lv] = pyra.scales[lv-interval] * 0.5f;

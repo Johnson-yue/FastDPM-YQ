@@ -50,6 +50,9 @@ void PM_type::analyze_model( MODEL &model )
 void PM_type::update_ruleData( MODEL &model, int num_levels )
 {
 	int comps = model.RuleData.size();
+#ifdef OMP_OPEN
+#pragma ompparallel for 
+#endif // OMP_OPEN
 	for( int component=0; component<comps; component++ ){
 		MODEL::RULE_DATA &RuleData = model.RuleData[component];
 		RuleData.num_levels = num_levels;

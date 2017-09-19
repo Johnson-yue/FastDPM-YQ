@@ -2,6 +2,9 @@
 #define FAST_DPM_H
 
 #include "PM_type.h"
+#include <omp.h>
+
+//#define OMP_OPEN
 using namespace PM_type;
 
 class FastDPM
